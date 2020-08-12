@@ -8,6 +8,7 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       render :edit
+    end
   end
 
   private
