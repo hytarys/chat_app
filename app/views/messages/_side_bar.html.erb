@@ -5,14 +5,15 @@
     <% end %>
   </div>
   <div class = "create_chat">
-    <a href = "#">チャットを作成する</a>
+    <a href = "/rooms/new">チャットを作成する</a>
   </div>
 </div>
 <div class = "side_bar_main">
-  <div class = "chatroom">
-    <a href = "#">techroom1</a>
-  </div>
-  <div class = "chatroom">
-    <a href = "#">techroom2</a>
-  </div>
+  <% current_user.rooms.each do |room|%>
+    <div class= "chatroom">
+      <div class ="chatroom-name">
+        <a href="#"><%= room.name%></a>
+      </div>
+    </div>
+  <%end%>
 </div>
