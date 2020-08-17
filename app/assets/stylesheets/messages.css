@@ -40,6 +40,7 @@
   height: calc(100% - 190px);
   background-color: #fafafa;
   padding: 46px 40px 0 40px;
+  overflow: scroll;
 }
 
 .main_box_under {
@@ -87,7 +88,7 @@
   height: 100%;
 }
 
-.main_user_name{
+.main_room_name{
   margin-top: 36px;
   color: #333;
 }
@@ -105,6 +106,10 @@
 
 .message_box_upper {
   display: flex;
+}
+
+.message {
+  margin: 10px 0;
 }
 
 .message_user {
