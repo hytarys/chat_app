@@ -19,21 +19,15 @@
       <div class = "content">おはよう</div>
     </div>
   </div>
-  <div class = "message_box">
-    <div class = "message_box_upper">
-      <div class = "message_user">Sim</div>
-      <div class = "time">時間</div>
-    </div>
-    <div class = "message_box_under">
-      <div class = "content">うるさい黙れ</div>
-    </div>
-  </div>
 </div>
-<div class = "main_box_under">
-  <div class = "text_box">
-    <input class = "text_form" type = "text" placeholder = "type a message">
-    <label class= "form-image">
-      <span class = "image-file">画像</span>
-      <input type ="file" class ="hidden">
-  </div>
-  <input type = "submit" value ="送信" class = "submit">
+  
+  <%= form_with model: [@room, @message], html: {class: "main_box_under"}, local: true do |f|%>
+    <div class="text_box">
+      <%= f.text_field :content, class: 'text_form', placeholder: 'type a message'%>
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= f.file_field :image, class: 'hidden' %>
+      </label>
+    </div>
+    <%= f.submit '送信', class: 'submit' %>
+  <% end %>
