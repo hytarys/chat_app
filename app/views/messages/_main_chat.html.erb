@@ -10,15 +10,7 @@
   </div>
 </div>
 <div class = "main_box_main">
-  <div class = "message_box">
-    <div class = "message_box_upper">
-      <div class = "message_user">Tom</div>
-      <div class = "time">時間</div>
-    </div>
-    <div class = "message_box_under">
-      <div class = "content">おはよう</div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages%>
 </div>
   
   <%= form_with model: [@room, @message], html: {class: "main_box_under"}, local: true do |f|%>
